@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel='stylesheet'  href='style.css' type='text/css' media='all' >
+    <title>Document</title>
+</head>
+<body>
+
+
+        <input type="text" id="name" placeholder="Name">
+        <input type="text" id="Rollnum" placeholder="Roll Number">
+        <input type="text" id="Gender" placeholder="Gender">
+        <input type="submit" value="submit" id="btn" onclick="addRow()">
+
+
+    <div id="main-div">
+
+        <table id="student-id" border="1">
+            <tr>
+                <th>Name</th>
+                <th>Roll Number</th>
+                <th>Gender</th>  
+                <th>Edit</th>  
+                <th>Delete</th>  
+            </tr>
+
+        </table>
+
+    </div>
+
+
+
+
+
+    <script>
+
+function addRow(){
+
+  
+
+    var nameARRy = [];
+    var RollnumARRy = [];
+    var genderARRy = [];
+    
+
+    var a =  document.getElementById("name").value;
+    var b =  document.getElementById("Rollnum").value;
+    var c =  document.getElementById("Gender").value;
+
+    nameARRy.push(a);
+    RollnumARRy.push(b);
+    genderARRy.push(c);
+
+    var tbl = document.getElementById("student-id").insertRow();
+      
+    
+
+    
+    var cell1 = tbl.insertCell(0);
+    var cell2 = tbl.insertCell(1);
+    var cell3 = tbl.insertCell(2);
+    var cell4 = tbl.insertCell(3);
+    var cell5 = tbl.insertCell(4);
+    
+    
+    for(var i = 0; i<nameARRy.length; i++){
+        var userInput1 = document.createTextNode(nameARRy[i]);
+        cell1.appendChild(userInput1);
+
+        var userInput2 = document.createTextNode(RollnumARRy[i]);
+        cell2.appendChild(userInput2);
+        
+        var userInput3 = document.createTextNode(genderARRy[i] );
+        cell3.appendChild(userInput3);
+       
+        }
+
+        
+        var userInput4 = document.createElement('button');
+        var t = document.createTextNode('Edit');
+        userInput4.appendChild(t)
+        cell4.appendChild(userInput4);
+        userInput4.onclick = function (){
+            var tableData = document.getElementsByTagName("td");
+
+         var Parent = this.parentElement.parentElement
+        // Parent.contentEditable = true;
+        
+        if(userInput4.innerText === "Edit")  {
+            userInput4.innerText = "Done"
+            Parent.contentEditable = true
+            Parent.focus();
+        }
+        else {
+            userInput4.innerText = "Edit"
+            Parent.contentEditable = false  
+        }
+    
+    
+}
+
+        var userInput5 = document.createElement('button');
+        var t = document.createTextNode('Delete');
+        userInput5.appendChild(t)
+        cell5.appendChild(userInput5);
+        userInput5.onclick = function (e){
+            this.parentElement.parentElement.remove()
+    
+        }
+
+        var a =  document.getElementById("name").value = "";
+        var b =  document.getElementById("Rollnum").value= "";
+        var c =  document.getElementById("Gender").value= "";
+    }   
+   
+   
+    
+
+    
+    
+    </script>
+</body>
+</html>

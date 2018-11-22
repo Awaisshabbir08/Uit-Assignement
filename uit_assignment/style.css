@@ -1,0 +1,18 @@
+h1 , h2 , h3{
+    color: blue;
+}
+*{
+    background-color: brown;
+}
+li>a{
+    color: rgb(55, 114, 116);
+}
+p a {
+    background-color: blue;
+}
+h1+p{
+    background-color: rgb(250, 231, 61);
+}
+h1~p{
+    background-color: rgb(250, 231, 61);
+}

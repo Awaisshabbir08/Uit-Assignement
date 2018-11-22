@@ -1,0 +1,12 @@
+#main-div{
+    margin: 20px 0 0 0 ;
+}
+#student-id{
+    margin: 10px 0 0 0;
+    padding: 10px;
+    border: 5px solid red;
+}
+tr{
+    margin: 5px;
+    padding: 5px;
+}

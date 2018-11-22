@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+    table:{
+        height: 200px;
+        width: 300px;
+        border: 2px double 11   #000000;
+    };
+    tr{
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        
+    }
+    th{
+        background-color: rgb(98, 98, 238);
+        color: rgba(255, 255, 255, 0.623);
+        padding: 7px;
+        margin: 5px;
+        text-align: center;
+    }
+    td{
+        margin: 5px;
+        padding: 7px;
+        background-color: rgb(140, 141, 141);
+        text-align: center;
+        
+    }
+    </style>
+</head>
+
+<body>
+    <script>
+        var sub1 = prompt("enter first subject");
+        var sub2 = prompt("enter second subject");
+        var sub3 = prompt("enter third subject");
+
+        var sub1_obt = prompt("Enter " + sub1 + " Marks");
+        var sub01_obt = parseInt(sub1_obt);
+        var sub2_obt = prompt("Enter " + sub2 + " Marks");
+        var sub02_obt = parseInt(sub2_obt);
+        var sub3_obt = prompt("Enter " + sub3 + " Marks");
+        var sub03_obt = parseInt(sub3_obt);
+
+        var total = 100;
+
+        var totalObt = sub01_obt + sub02_obt + sub03_obt;
+        ///
+        var per_1 = (sub01_obt / total) * 100;
+        var per_2 = (sub02_obt / total) * 100;
+        var per_3 = (sub03_obt / total) * 100;
+        ///
+        var total_per = (per_1 + per_2 + per_3) / 3;
+
+        document.write("<table>" + "<tr>" + "<th>" + "subject" + "</th>" + "<th>" + "Obtain Marks" + "</th>" + "<th>" + "Total Marks" + "</th>" + "<th>" + "Percantge" + "</th>" + "</tr>"+"<tr>" + "<td>" + sub1 + "</td>"+ "<td>" + sub1_obt + "</td>" + "<td>" + total + "</td>" + "<td>" + per_1 + "%" +"</td>" + "</tr>"+ "<tr>" + "<td>" + sub2 + "</td>"+ "<td>" + sub2_obt + "</td>" + "<td>" + total + "</td>" + "<td>" + per_2 + "%"+ "</td>" + "</tr>"+"<tr>" + "<td>" + sub3 + "</td>"+ "<td>" + sub3_obt + "</td>" + "<td>" + total + "</td>" + "<td>" + per_3 + "%"+ "</td>" + "</tr>"+"<tr>" + "<td>" + "</td>"+ "<td>" + totalObt + "</td>" + "<td>" + 300 + "</td>" + "<td>" + total_per + "%"+ "</td>" + "</tr>"+"</table>")
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="main-div">
+        <div id="slider-img">
+            <img src="" alt="" id="images">
+            <!-- <input type="button" value="next" onclick="showImages(1)">
+            <input type="button" value="previous" onclick="showImages(-1)"> -->
+
+        </div>
+
+
+
+    </div>
+
+    <script>
+        var imgArray = ['img/photo-1470940511639-1068d7764233.jpg', 'img/photo-1471999796791-874f5de3b3f4.jpg', 'img/photo-1507110905268-0f24a40d1a84.jpg', 'img/photo-1516571855259-d5988a8ff76e.jpg'];
+
+        var getImg = document.getElementById('images');
+
+        getImg.src = imgArray[0];
+
+
+
+        var counter = 0;
+
+
+        function showImages(n) {
+
+            // if (n == -1) {
+            //     counter--;
+
+        
+            //     if(counter < 0){
+            //         counter = imgArray.length -1;
+            //     }
+
+            // }
+
+            // else {
+
+                counter++;
+
+                if(counter == imgArray.length){
+                    counter = 0;
+                }
+            // }  
+        getImg.src = imgArray[counter]
+        }
+
+        setInterval(() => {showImages(1);
+            }, 3000);
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="name">
+    <input type="text" id="address">
+    <br>
+    <input type="radio" name="gender" value="male">Male
+    <br>
+    <input type="radio" name="gender" value="female">Female
+    <br>
+    <input type="radio" name="gender" value="others">Others
+    <br>
+    <select name="edu" id="education">
+        <option value="MBA">MBA</option>
+        <option value="BBA">BBA</option>
+        <option value="Msc">Msc</option>
+        <option value="i.com">i.com</option>
+        <option value="B.A">B.A</option>
+    </select>
+    <select name="pro" id="profession">
+        <option value="ingener">ingener</option>
+        <option value="moochi">moochi</option>
+        <option value="mazdoor">mazdoor</option>
+        <option value="chay wla">chay wla</option>
+        <option value="accountant">accountant</option>
+    </select>
+    <br>
+    <input type="button" value="click here to submit" onclick="putValues()">
+
+    
+
+    <script>
+
+
+     
+        
+        var counter = 0;
+        function putValues() {
+
+
+
+            var population = []
+            var nam = document.getElementById('name')
+            var adres = document.getElementById('address')
+            var gender = document.getElementsByName('gender')
+            var education = document.getElementById("education");
+            var profession = document.getElementById("profession");
+
+            var inputValues = new Property(nam.value, adres.value, null, education.value, profession.value)
+
+            var person = "person" + counter;
+
+            for (var i = 0; i < gender.length; i++) {
+                if (gender[i].checked) {
+                    inputValues.gender = gender[i].value;
+                    localStorage.setItem(person, JSON.stringify(inputValues));
+                   
+                    counter++;
+
+                    
+                    // localStorage.clear();    
+                    
+                }
+
+            }
+          var a =  localStorage.getItem(person);
+            console.log(a);
+        }
+
+        function Property(n, a, g, e, pro) {
+            this.name = n;
+            this.adress = a;
+            this.gender = g;
+            this.education = e;
+            this.profession = pro;
+        }
+
+
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        var itemsArray = [
+            { name: "juice", price: 50, quantity: 3},
+        { name: "cookie", price: 30, quantity: 9 },
+        { name: "shirt", price: 880, quantity: 1 },
+        { name: "pen", price: 100, quantity: 2 }
+        
+        ];
+
+alltemsPrice(itemsArray)
+
+function alltemsPrice(items){
+var j = 0; 
+    var jPrice = 0;
+     var total=0;
+     for(var i = 0 ; i< items.length; i++){
+        jPrice += items[i].price*items[i].quantity;
+      
+        
+
+        
+        console.log(jPrice);
+
+        j = items[i].price*items[i].quantity;
+        document.write(j + "<br>")
+
+
+        //   document.write(jPrice);
+        //   total+=jPrice;
+     }
+     document.write(jPrice)
+     
+
+}
+
+
+//    for(var z; z<itemsArray.length; z++ ){
+//        total += jPricearr[z];
+//        document.write(total);
+//    }
+     
+     
+     
+     
+     
+             // var jPrice = itemsArray[0].price*itemsArray[0].quantity;
+        // var cPrice = itemsArray[1].price*itemsArray[1].quantity;
+        // var sPrice = itemsArray[2].price*itemsArray[2].quantity;
+        // var pPrice = itemsArray[3].price*itemsArray[3].quantity;
+    //     var total = jPrice+cPrice+sPrice+pPrice;
+    //     document.write(jPrice + "price of juices" + cPrice + "price of cookie" + sPrice + "price of shirt" + pPrice + "price of pen" + "<br>");
+    //    document.write(total+ "totoal price!"); 
+
+
+        
+
+    </script>
+</body>
+
+</html>
